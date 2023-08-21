@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic View</title>
+</head>
+<body>
+    <h1>Dynamic View</h1>
+    <div id="content"></div>
+
+    <script id="template" type="text/x-handlebars-template">
+        <h2>{{pageTitle}}</h2>
+        <p>{{pageContent}}</p>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        const contentKey = queryParams.get("content");
+
+        const templates = {
+            page1: { pageTitle: "Page 1", pageContent: "This is content for Page 1." },
+            page2: { pageTitle: "Page 22", pageContent: "This is content for Page 2." },
+            page3: { pageTitle: "Page 3", pageContent: "This is content for Page 3." }
+        };
+
+        const templateSource = document.getElementById("template").innerHTML;
+        const template = Handlebars.compile(templateSource);
+
+        const contentDiv = document.getElementById("content");
+        contentDiv.innerHTML = template(templates[contentKey]);
+    </script>
+</body>
+</html>

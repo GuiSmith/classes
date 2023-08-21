@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href = "style.css">
+        <script src = index.js ></script>
+        <title>Movies</title>
+    </head>
+    <body>
+        <section>
+            <header>
+                <img src = "media/logo.png" alt="netflix logo" height = "75" class = "logo" onclick = "location.reload()">
+            </header>
+            <div class = "row" id = "row-1">
+                <script>
+                    row = "row-1";
+                    createCard("media/adam_project.png", "Adam Project", "adam", row);
+                    createCard("media/afterlife.png", "Afterlife", "afterlife", row);
+                    createCard("media/all_the_bright_places.png", "All the bright places", "bright", row);
+                    createCard("media/inception.png", "Inception", "inception", row);
+                </script>
+            </div>
+            <div class = "row" id = "row-2" >
+                <script>
+                    // row = "row-2";
+                    // createCard("media/suits.png", "Suits", "suits", row);
+                    // createCard("media/merli.png", "Merlí", "merli", row);
+                    // createCard("media/sense8.png", "Sense 8", "sense8", row);
+                    // createCard("media/miracle_in_cell_no_7.png", "Miracle in cell no.7", "miracle", row);
+                </script>
+            </div>
+        </section>
+    </body>
+</html>
